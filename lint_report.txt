@@ -1,0 +1,71 @@
+Lint Report for Test cases/FullTest.v generated at: 2025-01-03 18:40:14
+
+Arithmetic Overflow:
+	Line 14: Signal 'c' may overflow as no enough bitwidth available.
+	Line 20: Signal 'g' may overflow as no enough bitwidth available.
+	Line 62: Signal 'c' may overflow as no enough bitwidth available.
+	Line 68: Signal 'c' may overflow as no enough bitwidth available.
+Undefined Register Usage:
+	Line 20: Register 'g' is undefined 
+	Line 107: Register 'out' is undefined 
+	Line 108: Register 'out' is undefined 
+	Line 109: Register 'out' is undefined 
+	Line 115: Register 'out' is undefined 
+	Line 116: Register 'out' is undefined 
+	Line 117: Register 'out' is undefined 
+Multi-Driven Registers:
+	Line 30: Register 'a' is assigned in multiple always blocks. Previous assignment at line 25.
+	Line 36: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 45: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 45: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 61: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 67: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 73: Register 'a' is assigned in multiple always blocks. Previous assignment at line 25.
+	Line 80: Register 'a' is assigned in multiple always blocks. Previous assignment at line 25.
+	Line 87: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 87: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 87: Register 'd' is assigned in multiple always blocks. Previous assignment at line 55.
+	Line 97: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 97: Register 'c' is assigned in multiple always blocks. Previous assignment at line 13.
+	Line 114: Register 'out' is assigned in multiple always blocks. Previous assignment at line 106.
+	Line 114: Register 'out' is assigned in multiple always blocks. Previous assignment at line 106.
+	Line 114: Register 'out' is assigned in multiple always blocks. Previous assignment at line 106.
+Inferred Latches:
+	Line 35: Inferred latch found: 'if' statement without an 'else' branch.
+	Line 96: Inferred latch found: 'if' statement without an 'else' branch.
+Non Parallel Cases:
+	Line 105: Non Parallel Case Found: 'case' statement not parallel.
+	Line 113: Non Parallel Case Found: 'case' statement not parallel.
+Duplicate Case Values:
+	Line 106: Duplicate case value '4'b0001' found 2 times on lines 106, 106 in case block starting at line 106.
+	Line 114: Duplicate case value '4'b0101' found 2 times on lines 114, 114 in case block starting at line 114.
+Uninitialized Register Case:
+	Line 14: Uninitialized register 'a' used before initialization. Lines: 14, 20, 62, 68, 75.
+	Line 14: Uninitialized register 'b' used before initialization. Lines: 14, 20, 26, 38, 62, 68, 74, 81, 99.
+	Line 56: Uninitialized register 'e' used before initialization. Lines: 56.
+Incomplete Sensitivity List:
+	Invalid entry in lines: Line 12: Incomplete sensitivity list: Missing signals c in block starting at line 12.
+	Invalid entry in lines: Line 18: Incomplete sensitivity list: Missing signals g, b in block starting at line 18.
+	Invalid entry in lines: Line 24: Incomplete sensitivity list: Missing signals b in block starting at line 24.
+	Invalid entry in lines: Line 29: Incomplete sensitivity list: Missing signals c, a in block starting at line 29.
+	Invalid entry in lines: Line 35: Incomplete sensitivity list: Missing signals c in block starting at line 35.
+	Invalid entry in lines: Line 44: Incomplete sensitivity list: Missing signals b1, c, b0 in block starting at line 44.
+	Invalid entry in lines: Line 54: Incomplete sensitivity list: Missing signals d, e in block starting at line 54.
+	Invalid entry in lines: Line 60: Incomplete sensitivity list: Missing signals c, b in block starting at line 60.
+	Invalid entry in lines: Line 86: Incomplete sensitivity list: Missing signals c, b00, b0, d, b1 in block starting at line 86.
+Blocking assignment errors:
+	Invalid entry in lines: Line 14: Blocking assignment ('=') to 'c' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 74: Blocking assignment ('=') to 'a' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 81: Blocking assignment ('=') to 'a' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 99: Blocking assignment ('=') to 'c' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 101: Blocking assignment ('=') to 'c' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 99: Blocking assignment ('=') to 'c' in clocked block. Consider using non-blocking ('<=').
+	Invalid entry in lines: Line 101: Blocking assignment ('=') to 'c' in clocked block. Consider using non-blocking ('<=').
+Race Condition:
+	Line [14, 38, 47, 48, 62, 68, 75, 89, 90, 99, 101]: Signal 'c' assigned on lines 14, 38, 47, 48, 62, 68, 75, 89, 90, 99, 101
+	Line [26, 31, 74, 81, 82]: Signal 'a' assigned on lines 26, 31, 74, 81, 82
+	Line [56, 91]: Signal 'd' assigned on lines 56, 91
+	Line [107, 108, 109, 115, 116, 117]: Signal 'out' assigned on lines 107, 108, 109, 115, 116, 117
+Array Index Out of Bounds:
+	Line 123: Array 'memory' index 20 out of bounds. Valid range: [0:15].
+	Line 124: Potential out of bounds access for array 'memory' with variable index 'index'.
